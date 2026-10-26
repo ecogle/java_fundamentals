@@ -3,6 +3,8 @@
  */
 package phase1.basics;
 
+import java.util.Scanner;
+
 /**
  * 
  */
@@ -16,6 +18,7 @@ public class JavaBasics {
 		//PersonalInfo();
 		//ConvertTemp();
 		QuadrilateralMeasuments();
+		ConvertTemp();
 	}
 	
 	public static void PersonalInfo() {
