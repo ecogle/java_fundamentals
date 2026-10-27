@@ -16,7 +16,8 @@ public class JavaBasics {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//PersonalInfo();
-		ConvertTemp();
+		//ConvertTemp();
+		QuadrilateralMeasuments();
 	}
 	
 	public static void PersonalInfo() {
@@ -45,6 +46,20 @@ public class JavaBasics {
 		
 		System.out.println(temp + " in " + type + " is: " + tc.convertTemp());
 		
+	}
+	
+	public static void QuadrilateralMeasuments() {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Input length: ");
+		double length = scanner.nextDouble();
+		System.out.print("Input width: ");
+		double width = scanner.nextDouble();
+		
+		QuadrilateralAreaCalc calc = new QuadrilateralAreaCalc(length, width);
+		
+		System.out.println("\nArea is " + calc.GetArea() + "\nPerimeter is: " + calc.GetPerimeter());
 	}
 
 }
