@@ -3,8 +3,6 @@
  */
 package phase1.basics;
 
-import java.util.Scanner;
-
 /**
  * 
  */
