@@ -17,8 +17,8 @@ public class JavaBasics {
 		// TODO Auto-generated method stub
 		//PersonalInfo();
 		//ConvertTemp();
-		QuadrilateralMeasuments();
-		ConvertTemp();
+		QuadrilateralMeasurements();
+		//ConvertTemp();
 	}
 	
 	public static void PersonalInfo() {
@@ -49,9 +49,9 @@ public class JavaBasics {
 		
 	}
 	
-	public static void QuadrilateralMeasuments() {
+	public static void QuadrilateralMeasurements() {
 		
-		Scanner scanner = new Scanner(System.in);
+		try (Scanner scanner = new Scanner(System.in)) {
 		
 		System.out.print("Input length: ");
 		double length = scanner.nextDouble();
@@ -61,6 +61,7 @@ public class JavaBasics {
 		QuadrilateralAreaCalc calc = new QuadrilateralAreaCalc(length, width);
 		
 		System.out.println("\nArea is " + calc.GetArea() + "\nPerimeter is: " + calc.GetPerimeter());
+		}
 	}
 
 }

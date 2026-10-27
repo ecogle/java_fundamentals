@@ -22,13 +22,13 @@ public class QuadrilateralAreaCalc {
 	
 	public double GetArea() {
 		
-		return Math.round(((this.length * this.width)* 100)/100);
+		return Math.round(this.length * this.width * 100.0) / 100.0;
 		
 	}
 	
 	public double GetPerimeter() {
 		
-		return Math.round((((this.length + this.width)*2)*100)/100);
+		return Math.round((this.length + this.width) * 2.0 * 100.0) / 100.0;
 		
 	}
 
