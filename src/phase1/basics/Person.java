@@ -7,6 +7,7 @@ public class Person {
 	private Height height;
 	private String FavColor;
 	
+	@SuppressWarnings("unused")
 	private Person() {}
 	
 	public Person(String name,int age, int feet, int inches, String FavColor) {
