@@ -1,41 +1,56 @@
 package phase1.basics;
 
+import java.util.Scanner;
+
 public class TempConverter {
 
 	private double fTemp = 0d;
 	private double cTemp = 0d;
-	
+
 	/*
 	 * TempTypes: F for Farenheight, C for Celcius
 	 */
-	public TempConverter(double temp,String type) {
-		
-		if(type.equalsIgnoreCase(TempTypes.F.toString())) {
+	public TempConverter(double temp, String type) {
+
+		if (type.equalsIgnoreCase(TempTypes.F.toString())) {
 			fTemp = temp;
-		}
-		else if(type.equalsIgnoreCase(TempTypes.C.toString())) {
-			cTemp=temp;
+		} else if (type.equalsIgnoreCase(TempTypes.C.toString())) {
+			cTemp = temp;
 		}
 	}
-	
-	enum TempTypes{
+
+	enum TempTypes {
 		F,
 		C
 	}
-	
-	public double convertTemp() {
-		double result=0.0d;
-		
-		if(this.fTemp != 0) {
-			result = (this.fTemp - 32d) * 5d/9d;
 
+	public static void run() {
+		String temp;
+		String type;
+
+		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.print("Enter temp: ");
+			temp = scanner.next();
+			System.out.print("Enter Type (F or C): ");
+			type = scanner.next();
 		}
-		else {
+		TempConverter tc = new TempConverter(Double.parseDouble(temp), type);
+
+		System.out.println(temp + " in " + type + " is: " + tc.convertTemp());
+	}
+
+	public double convertTemp() {
+		double result = 0.0d;
+
+		if (this.fTemp != 0) {
+			result = (this.fTemp - 32d) * 5d / 9d;
+
+		} else {
 			result = ((this.cTemp * 9d) / 5d) + 32d;
 		}
-		
+
 		System.out.println(result);
-		
-		return Math.round(result * 100d)/100d;
+
+		return Math.round(result * 100d) / 100d;
 	}
 }
