@@ -17,8 +17,9 @@ public class JavaBasics {
 		// TODO Auto-generated method stub
 		//PersonalInfo();
 		//ConvertTemp();
-		QuadrilateralMeasurements();
+		//QuadrilateralMeasurements();
 		//ConvertTemp();
+		TipCalculator();
 	}
 	
 	public static void PersonalInfo() {
@@ -62,6 +63,23 @@ public class JavaBasics {
 		
 		System.out.println("\nArea is " + calc.GetArea() + "\nPerimeter is: " + calc.GetPerimeter());
 		}
+	}
+	
+	public static void TipCalculator() {
+		double billAmount;
+		double tipPercentage;
+		
+		var tipCalc = new TipCalculator();
+		try(Scanner scanner = new Scanner(System.in)){
+			System.out.print("Enter bill amount: ");
+			billAmount = scanner.nextDouble();
+			System.out.print("Enter tip percentage: ");
+			tipPercentage = scanner.nextDouble();
+			
+			System.out.println("The total amount is: $" + tipCalc.calculateTip(billAmount, tipPercentage));
+		}
+				;
+		
 	}
 
 }
