@@ -19,7 +19,13 @@ public class GradeCalculator implements CanStart {
 
     }
 
+    @Override
     public void Start() {
 
+    }
+
+    @Override
+    public void run() {
+        Start();
     }
 }
