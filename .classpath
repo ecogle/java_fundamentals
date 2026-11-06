@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21"/>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="test/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="lib" path="c:/Users/ecogl/eclipse-workspace-2026-9/JavaRoadmap/external/postgresql-42.7.14.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

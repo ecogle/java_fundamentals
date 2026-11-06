@@ -3,6 +3,8 @@
  */
 package phase1.basics;
 
+import phase1.database.Demo;
+
 /**
  * 
  */
@@ -19,7 +21,7 @@ public class JavaBasics {
 		// ConvertTemp();
 		// TipCalculator();
 		// OddEven();
-
+		Demo.listActors().stream().forEach((d) -> System.out.println(d));
 	}
 
 	public static void PersonalInfo() {
